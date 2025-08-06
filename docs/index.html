@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BackOffice PWA</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: sans-serif; padding: 1rem; }
+    fieldset { margin-bottom: 1rem; }
+    legend { font-weight: bold; }
+  </style>
 </head>
 <body>
   <h1>Registro BackOffice</h1>
@@ -13,59 +16,72 @@
     <!-- Sección: Datos Generales -->
     <fieldset id="datos-generales">
       <legend>Datos Generales</legend>
-      <label for="concepto">Concepto</label>
-      <select name="concepto" id="concepto" required>
-        <option value="">-- Selecciona --</option>
-        <option value="Ingreso">Ingreso</option>
-        <option value="Gasto">Gasto</option>
-        <option value="Inversión">Inversión</option>
-        <option value="Préstamo">Préstamo</option>
-        <option value="Transferencia">Transferencia</option>
-      </select>
-
-      <label for="fecha">Fecha</label>
-      <input type="date" name="fecha" id="fecha" required>
+      <label for="concepto">Concepto<br>
+        <select name="concepto" id="concepto" required>
+          <option value="">-- Selecciona --</option>
+          <option value="Ingreso">Ingreso</option>
+          <option value="Gasto">Gasto</option>
+          <option value="Inversión">Inversión</option>
+          <option value="Préstamo">Préstamo</option>
+          <option value="Transferencia">Transferencia</option>
+        </select>
+      </label>
+      <br>
+      <label for="fecha">Fecha<br>
+        <input type="date" name="fecha" id="fecha" required>
+      </label>
     </fieldset>
 
     <!-- Sección: Información Financiera -->
     <fieldset id="info-financiera">
       <legend>Información Financiera</legend>
-      <label for="cliente_proveedor">Cliente/Proveedor</label>
-      <input type="text" name="cliente_proveedor" id="cliente_proveedor" required>
-
-      <label for="valor_unitario">Valor unitario</label>
-      <input type="number" name="valor_unitario" id="valor_unitario" step="0.01" required>
-
-      <label for="cantidad">Cantidad</label>
-      <input type="number" name="cantidad" id="cantidad" step="1" required>
-
-      <label for="descuento">Descuento</label>
-      <input type="number" name="descuento" id="descuento" step="0.01">
-
-      <label for="lote">Lote</label>
-      <input type="text" name="lote" id="lote">
+      <label for="cliente_proveedor">Cliente/Proveedor<br>
+        <input type="text" name="cliente_proveedor" id="cliente_proveedor" required>
+      </label>
+      <br>
+      <label for="valor_unitario">Valor unitario<br>
+        <input type="number" name="valor_unitario" id="valor_unitario" step="0.01" required>
+      </label>
+      <br>
+      <label for="cantidad">Cantidad<br>
+        <input type="number" name="cantidad" id="cantidad" step="1" required>
+      </label>
+      <br>
+      <label for="descuento">Descuento<br>
+        <input type="number" name="descuento" id="descuento" step="0.01">
+      </label>
+      <br>
+      <label for="lote">Lote<br>
+        <input type="text" name="lote" id="lote">
+      </label>
     </fieldset>
 
     <!-- Sección: Cuentas y Saldos -->
     <fieldset id="cuentas-saldos">
       <legend>Cuentas y Saldos</legend>
-      <label for="cxc">CxC</label>
-      <input type="number" name="cxc" id="cxc" step="0.01">
-
-      <label for="cxp">CxP</label>
-      <input type="number" name="cxp" id="cxp" step="0.01">
-
-      <label for="banco_debe">Banco Debe</label>
-      <input type="number" name="banco_debe" id="banco_debe" step="0.01">
-
-      <label for="banco_haber">Banco Haber</label>
-      <input type="number" name="banco_haber" id="banco_haber" step="0.01">
-
-      <label for="caja_debe">Caja Debe</label>
-      <input type="number" name="caja_debe" id="caja_debe" step="0.01">
-
-      <label for="caja_haber">Caja Haber</label>
-      <input type="number" name="caja_haber" id="caja_haber" step="0.01">
+      <label for="cxc">CxC<br>
+        <input type="number" name="cxc" id="cxc" step="0.01">
+      </label>
+      <br>
+      <label for="cxp">CxP<br>
+        <input type="number" name="cxp" id="cxp" step="0.01">
+      </label>
+      <br>
+      <label for="banco_debe">Banco Debe<br>
+        <input type="number" name="banco_debe" id="banco_debe" step="0.01">
+      </label>
+      <br>
+      <label for="banco_haber">Banco Haber<br>
+        <input type="number" name="banco_haber" id="banco_haber" step="0.01">
+      </label>
+      <br>
+      <label for="caja_debe">Caja Debe<br>
+        <input type="number" name="caja_debe" id="caja_debe" step="0.01">
+      </label>
+      <br>
+      <label for="caja_haber">Caja Haber<br>
+        <input type="number" name="caja_haber" id="caja_haber" step="0.01">
+      </label>
     </fieldset>
 
     <!-- Sección: Facturación -->
@@ -75,17 +91,56 @@
         <input type="checkbox" name="crear_factura" id="crear_factura">
         Crear factura (venta)
       </label>
+      <br>
       <label>
         <input type="checkbox" name="crear_factura_compra" id="crear_factura_compra">
         Crear factura (compra)
       </label>
-      <label for="foto_factura">Foto de factura (compra)</label>
-      <input type="file" name="foto_factura" id="foto_factura" accept="image/*">
+      <br>
+      <label for="foto_factura">Foto de factura (compra)<br>
+        <input type="file" name="foto_factura" id="foto_factura" accept="image/*">
+      </label>
     </fieldset>
 
     <button type="submit">Enviar</button>
   </form>
 
-  <script src="app.js"></script>
+  <script>
+    // Lógica show/hide y manejo de required
+    function updateSections() {
+      const concepto = document.getElementById('concepto').value;
+      const rules = {
+        'datos-generales':      ['Ingreso','Gasto','Inversión','Préstamo','Transferencia'],
+        'info-financiera':      ['Ingreso','Gasto','Inversión','Préstamo','Transferencia'],
+        'cuentas-saldos':       ['Ingreso','Gasto','Inversión','Préstamo','Transferencia'],
+        'facturacion':          ['Ingreso','Gasto']
+      };
+      Object.entries(rules).forEach(([sectionId, allowed]) => {
+        const fs = document.getElementById(sectionId);
+        const show = allowed.includes(concepto);
+        fs.style.display = show ? 'block' : 'none';
+        fs.querySelectorAll('input, select').forEach(el => {
+          if (!show) {
+            el.removeAttribute('required');
+          } else if (el.dataset.origRequired === 'true') {
+            el.setAttribute('required', '');
+          }
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Marcar campos originalmente required
+      document.querySelectorAll('input[required], select[required]').forEach(el => {
+        el.dataset.origRequired = 'true';
+      });
+      updateSections();
+      document.getElementById('concepto').addEventListener('change', updateSections);
+      document.getElementById('backoffice-form').addEventListener('submit', e => {
+        e.preventDefault();
+        alert('Formulario listo para procesar');
+      });
+    });
+  </script>
 </body>
 </html>
