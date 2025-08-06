@@ -11,74 +11,76 @@
   <h1>Registro BackOffice</h1>
   <form id="backoffice-form">
     <!-- Sección: Datos Generales -->
-    <fieldset>
+    <fieldset id="datos-generales">
       <legend>Datos Generales</legend>
-      <label>Concepto
-        <select name="concepto" id="concepto">
-          <option value="">-- Selecciona --</option>
-          <option value="Ingreso">Ingreso</option>
-          <option value="Gasto">Gasto</option>
-          <option value="Inversión">Inversión</option>
-          <option value="Préstamo">Préstamo</option>
-          <option value="Transferencia">Transferencia</option>
-        </select>
-      </label>
-      <label>Fecha
-        <input type="date" name="fecha" required>
-      </label>
+      <label for="concepto">Concepto</label>
+      <select name="concepto" id="concepto" required>
+        <option value="">-- Selecciona --</option>
+        <option value="Ingreso">Ingreso</option>
+        <option value="Gasto">Gasto</option>
+        <option value="Inversión">Inversión</option>
+        <option value="Préstamo">Préstamo</option>
+        <option value="Transferencia">Transferencia</option>
+      </select>
+
+      <label for="fecha">Fecha</label>
+      <input type="date" name="fecha" id="fecha" required>
     </fieldset>
 
     <!-- Sección: Información Financiera -->
-    <fieldset data-showif="true">
+    <fieldset id="info-financiera">
       <legend>Información Financiera</legend>
-      <label>Cliente/Proveedor
-        <input type="text" name="cliente_proveedor" required>
-      </label>
-      <label>Valor unitario
-        <input type="number" name="valor_unitario" step="0.01" required>
-      </label>
-      <label>Cantidad
-        <input type="number" name="cantidad" step="1" required>
-      </label>
-      <label>Descuento
-        <input type="number" name="descuento" step="0.01">
-      </label>
-      <label>Lote
-        <input type="text" name="lote">
-      </label>
+      <label for="cliente_proveedor">Cliente/Proveedor</label>
+      <input type="text" name="cliente_proveedor" id="cliente_proveedor" required>
+
+      <label for="valor_unitario">Valor unitario</label>
+      <input type="number" name="valor_unitario" id="valor_unitario" step="0.01" required>
+
+      <label for="cantidad">Cantidad</label>
+      <input type="number" name="cantidad" id="cantidad" step="1" required>
+
+      <label for="descuento">Descuento</label>
+      <input type="number" name="descuento" id="descuento" step="0.01">
+
+      <label for="lote">Lote</label>
+      <input type="text" name="lote" id="lote">
     </fieldset>
 
     <!-- Sección: Cuentas y Saldos -->
-    <fieldset data-showif="true">
+    <fieldset id="cuentas-saldos">
       <legend>Cuentas y Saldos</legend>
-      <label>CxC
-        <input type="number" name="cxc" step="0.01">
-      </label>
-      <label>CxP
-        <input type="number" name="cxp" step="0.01">
-      </label>
-      <label>Banco Debe
-        <input type="number" name="banco_debe" step="0.01">
-      </label>
-      <label>Banco Haber
-        <input type="number" name="banco_haber" step="0.01">
-      </label>
-      <label>Caja Debe
-        <input type="number" name="caja_debe" step="0.01">
-      </label>
-      <label>Caja Haber
-        <input type="number" name="caja_haber" step="0.01">
-      </label>
+      <label for="cxc">CxC</label>
+      <input type="number" name="cxc" id="cxc" step="0.01">
+
+      <label for="cxp">CxP</label>
+      <input type="number" name="cxp" id="cxp" step="0.01">
+
+      <label for="banco_debe">Banco Debe</label>
+      <input type="number" name="banco_debe" id="banco_debe" step="0.01">
+
+      <label for="banco_haber">Banco Haber</label>
+      <input type="number" name="banco_haber" id="banco_haber" step="0.01">
+
+      <label for="caja_debe">Caja Debe</label>
+      <input type="number" name="caja_debe" id="caja_debe" step="0.01">
+
+      <label for="caja_haber">Caja Haber</label>
+      <input type="number" name="caja_haber" id="caja_haber" step="0.01">
     </fieldset>
 
     <!-- Sección: Facturación -->
-    <fieldset data-showif="false">
+    <fieldset id="facturacion">
       <legend>Facturación</legend>
-      <label><input type="checkbox" name="crear_factura"> Crear factura (venta)</label>
-      <label><input type="checkbox" name="crear_factura_compra"> Crear factura (compra)</label>
-      <label>Foto de factura (compra)
-        <input type="file" name="foto_factura" accept="image/*">
+      <label>
+        <input type="checkbox" name="crear_factura" id="crear_factura">
+        Crear factura (venta)
       </label>
+      <label>
+        <input type="checkbox" name="crear_factura_compra" id="crear_factura_compra">
+        Crear factura (compra)
+      </label>
+      <label for="foto_factura">Foto de factura (compra)</label>
+      <input type="file" name="foto_factura" id="foto_factura" accept="image/*">
     </fieldset>
 
     <button type="submit">Enviar</button>
